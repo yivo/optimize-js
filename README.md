@@ -36,6 +36,20 @@ There is no need to do anything.
 <br>
 Gem will automatically register `OptimizeJS::SprocketsProcessor` using `register_bundle_processor` so all your JavaScript assets will be optimized.
 
+## Updating optimize-js to the latest version
+1. Install gem dependencies: `bundle install`
+2. Run: `bundle exec rake optimize_js`
+
+This rake task will do several things:
+1. Clone latest git tag
+2. Install npm dependencies
+3. Install browserify
+4. Install uglifyjs
+5. Make web-version
+6. Minify web-version
+7. Write version to optimize-js/version.rb
+8. Cleanup
+
 ## Running tests
 1. Install gem dependencies: `bundle install`
 2. Run tests: `bundle exec rake test`
@@ -47,3 +61,9 @@ Gem will automatically register `OptimizeJS::SprocketsProcessor` using `register
 4. Test on different versions of ruby.
 5. Sprockets without Rails.
 6. Typos in README.
+
+## Licence
+[JavaScript Library Licence](https://github.com/yivo/optimize-js/blob/master/OPTIMIZE-JS-LICENCE)
+<br>
+[Ruby Gem Licence](https://github.com/yivo/optimize-js/blob/master/LICENCE)
+
