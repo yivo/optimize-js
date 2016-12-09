@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - 2.3
+
+cache: bundler
+
+branches:
+  only:
+    - master
+
+env:
+  - RAKE_ENV=test
+
+script:
+  - bundle exec rake test
