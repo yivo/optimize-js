@@ -1,5 +1,7 @@
 ## Ruby wrapper and Rails asset pipeline integration for [optimize-js](https://github.com/nolanlawson/optimize-js).
 
+[![Build Status](https://travis-ci.org/yivo/optimize-js.svg?branch=master)](https://travis-ci.org/yivo/optimize-js)
+
 ## About
 This gem is ruby wrapper for [optimize-js](https://github.com/nolanlawson/optimize-js). It allows you to invoke optimize-js from ruby. For Rails users this gem automatically integrates optimize-js into sprockets.
 
