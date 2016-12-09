@@ -12,14 +12,18 @@ task :optimize_js do
   def cmd(description, command)
     puts description
     puts "  => #{command}"
-    system command
+    ret = `#{command}`
     puts
+    ret
   end
 
   cmd 'Remove optimize-js repository', 'rm -rf optimize-js-repo'
 
+  tags = cmd 'Requesting optimize-js git tags...',
+             'curl https://api.github.com/repos/nolanlawson/optimize-js/tags'
+
   cmd 'Cloning optimize-js repository...',
-      'git clone --single-branch --depth 1 --no-hardlinks https://github.com/nolanlawson/optimize-js.git optimize-js-repo'
+      "git clone --single-branch --branch #{JSON.parse(tags)[0]['name']} --depth 1 --no-hardlinks https://github.com/nolanlawson/optimize-js.git optimize-js-repo"
 
   version = JSON.parse(File.read('optimize-js-repo/package.json'))['version']
   puts "optimize-js version: #{version}"
