@@ -8,6 +8,8 @@ require 'rake/testtask'
 
 Rake::TestTask.new { |t| t.libs << 'test' }
 
+task default: :spec
+
 task :optimize_js do
   def cmd(description, command)
     puts description
