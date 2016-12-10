@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.author          = 'Yaroslav Konoplov'
   s.email           = 'eahome00@gmail.com'
   s.summary         = 'Ruby wrapper and Rails asset pipeline integration for optimize-js.'
-  s.description     = 'optimize-js makes JavaScript files load faster. This gem provider Ruby and Rails asset pipeline integration for optimize-js.'
+  s.description     = 'optimize-js makes JavaScript scripts initialize faster. This gem provides Ruby and Rails asset pipeline integration for optimize-js.'
   s.homepage        = 'https://github.com/yivo/optimize-js'
   s.license         = 'MIT'
 
