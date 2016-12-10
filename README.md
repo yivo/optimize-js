@@ -1,5 +1,6 @@
 ## Ruby wrapper and Rails asset pipeline integration for [optimize-js](https://github.com/nolanlawson/optimize-js).
 
+[![Gem Version](https://badge.fury.io/rb/optimize-js.svg)](https://badge.fury.io/rb/optimize-js)
 [![Build Status](https://travis-ci.org/yivo/optimize-js.svg?branch=master)](https://travis-ci.org/yivo/optimize-js)
 
 ## About
