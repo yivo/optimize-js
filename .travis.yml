@@ -5,12 +5,8 @@ rvm:
 
 cache: bundler
 
-branches:
-  only:
-    - master
-
-env:
-  - RAKE_ENV=test
-
-script:
-  - bundle exec rake test
+gemfile:
+  - gemfiles/rails_3.gemfile
+  - gemfiles/rails_4_with_sprockets_2.gemfile
+  - gemfiles/rails_4_with_sprockets_3.gemfile
+  - gemfiles/rails_5.gemfile
