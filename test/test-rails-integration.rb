@@ -48,6 +48,7 @@ private
       config.assets.paths = [Rails.root.join('test/fixtures/javascripts').to_s]
       config.assets.precompile = %w( 'application.js' )
       config.paths['public'] = Rails.root.join('tmp').to_s
+      config.active_support.deprecation = :stderr
     end
   end
 
