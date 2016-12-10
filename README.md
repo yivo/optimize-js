@@ -44,6 +44,7 @@ Gem will automatically register `OptimizeJS::SprocketsProcessor` using `register
 2. Run: `bundle exec rake optimize_js`
 
 This rake task will do several things:
+
 1. Clone latest git tag
 2. Install npm dependencies
 3. Install browserify
@@ -58,10 +59,10 @@ This rake task will do several things:
 2. Run tests: `bundle exec rake test`
 
 ## Things to work on
-1. Write integration tests.
-2. Test on different versions of sprockets.
-3. Test on different versions of rails.
-4. Test on different versions of ruby.
+1. ~~Write integration tests.~~
+2. ~~Test on different versions of sprockets.~~
+3. ~~Test on different versions of rails.~~
+4. ~~Test on different versions of ruby.~~
 5. Sprockets without Rails.
 6. Typos in README.
 
