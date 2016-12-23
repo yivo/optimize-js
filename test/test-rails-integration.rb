@@ -19,9 +19,13 @@ class RailsIntegrationTest < Test::Unit::TestCase
     app = create_rails_application
     app.initialize!
     task = create_sprockets_task(app)
-
     task.instance_exec { manifest.compile(assets) }
-    assert_equal app.assets['application.js'].to_s.strip, '!(function() {})();'
+
+    expected = <<-JAVASCRIPT.strip
+      !(function(){console.log("application.js")})(),!(function(){console.log("foo.js")})();
+    JAVASCRIPT
+    
+    assert_equal expected, app.assets['application.js'].to_s.strip
   end
 
   def setup
@@ -46,8 +50,10 @@ private
       config.assets.enabled = true
       config.assets.gzip = false
       config.assets.paths = [Rails.root.join('test/fixtures/javascripts').to_s]
-      config.assets.precompile = %w( 'application.js' )
-      config.paths['public'] = Rails.root.join('tmp').to_s
+      config.assets.precompile = %w( application.js )
+      config.assets.js_compressor = :uglifier
+      config.assets.compress = true
+      config.paths['public'] = [Rails.root.join('tmp').to_s]
       config.active_support.deprecation = :stderr
     end
   end
