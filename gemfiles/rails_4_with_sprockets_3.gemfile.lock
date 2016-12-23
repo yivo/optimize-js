@@ -1,7 +1,7 @@
 PATH
   remote: ../
   specs:
-    optimize-js (1.0.1)
+    optimize-js (1.0.2)
       execjs (>= 1)
 
 GEM
