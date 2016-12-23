@@ -16,8 +16,10 @@ class OptimizeJS::Railtie < Rails::Railtie
 
   initializer 'sprockets.optimize_js', group: :all, after: 'sprockets.environment' do |app|
     configure_assets(app) do |env|
-      # Sprockets 2, 3, and 4
-      env.register_bundle_processor 'application/javascript', OptimizeJS::SprocketsProcessor
+      unless app.config.assets.compile
+        env.register_bundle_processor 'application/javascript', OptimizeJS::SprocketsProcessor
+      end
     end
   end
 end
+

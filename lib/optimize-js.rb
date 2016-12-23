@@ -25,4 +25,5 @@ module OptimizeJS
   end
 end
 
+require 'optimize-js/sprockets-patch'
 require 'optimize-js/railtie' if defined?(Rails)
